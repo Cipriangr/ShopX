@@ -38,7 +38,7 @@ document.onkeydown = function(evt) {
         <div class="item-content"
         <span class="cart-item-name">${wish.name}</span>
       </div> 
-      <span class="wish-item-remove" id="wish-item-remove"><img src="/img-cart/trash-icon.png"></span>
+      <span class="wish-item-remove" id="wish-item-remove"><img src="img-cart/trash-icon.png"></span>
         `;
         const wishcart = document.getElementById('wishlist-content');
         wishcart.appendChild(wishItem)
@@ -79,7 +79,7 @@ document.onkeydown = function(evt) {
           <span class="cart-item-name">${item.name}</span>
           <span class="cart-item-price">${item.price}</span>
         </div> 
-        <span class="cart-item-remove" id="cart-item-remove"><img src="/img-cart/trash-icon.png"></span>
+        <span class="cart-item-remove" id="cart-item-remove"><img src="img-cart/trash-icon.png"></span>
         `;
         //select cart
         const cart = document.getElementById('cart-content');
