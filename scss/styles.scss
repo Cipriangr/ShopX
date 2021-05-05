@@ -36,22 +36,39 @@ header{
               &.dropdown{
                 position:unset;
                 &.custom{
+                  padding: 10px 0;
+                  background-color:transparent;
+                  border-bottom:2px solid white;
                   &:hover{
                     height:60px;
                     display:flex;
                     align-items:center;
                     background-color:#262a32;
                     border-bottom:2px solid #93ca57;
-                    padding:0 5px 0 15px;
+                    @media screen and (max-width: 600px) {
+                    height: initial;
+                    padding: 10px 0;
+                    }
                   >.dropdown-menu{
                     display:block;
                     top:65px;
+                    @media screen and (max-width: 1023px) {
+                      position: absolute;
+                    }
+                    @media screen and (max-width: 1023px) {
+                      display: none;
+                      &.show{
+                        position: absolute;
+                        display: block;
+                        top: 70px;
+                      }
+                    }
                   }
                   >a{
                     color:white !important;
-                    &:after{
-                      margin-left:15px;
-                    }
+                    // &:after{
+                    //   margin-left:15px;
+                    // }
                   }
                 }
                 }
@@ -62,6 +79,32 @@ header{
                 }
                 .row{
                   width:100%;
+                  margin: 0 auto;
+                  @media screen and (max-width: 600px){
+                    .col-md-2, .col-md-3{
+                      border: 2px solid white;
+                      margin-bottom: 5px;
+                    }
+                    .image-col{
+                      display: none;
+                    }
+                  }
+                  @media screen and (max-width: 1023px){
+                    .image-col{
+                      display: none;
+                    }
+                  }
+                  h5{
+                    padding: 0 5px!important;
+                    @media screen and (max-width: 600px){
+                      font-size: 1.7rem;
+                    }
+                  }
+                  a{
+                    padding: 5px;
+                    margin: 5px 0;
+                    width: fit-content;
+                  }
                 }
                 .dropdown-menu{
                   width:100%;
@@ -83,10 +126,24 @@ header{
                   img{
                     width:100%;
                   }
+                  @media screen and(min-width: 1023px){
+                    .product-col{
+                      flex: 0 0 21.666667%!important;
+                      max-width: 21.666667%!important;
+                    }
+                    .sales-col{
+                      flex: 0 0 18%!important;
+                      max-width: 18%!important;
+                    }
+                    .image-col{
+                      flex: 0 0 27%!important;
+                      max-width: 27%!important;
+                    }
+                  }
                 }
               }
               &:hover{
-                color: #84bc22;
+                color: red;
               }
             }
             &.desktop{
@@ -509,6 +566,7 @@ footer{
         left:0;
         right:0;
         background-color:#262a32;
+        border: 4px solid #2ed3a2;
         button{
           background-color:#262a32;
           }
@@ -667,6 +725,9 @@ footer{
 
 .nav-item{
   padding: 20px 0;
+  @media screen and (max-width: 600px){
+    padding: 10px 0;
+  }
   
 }
 #cart-items{

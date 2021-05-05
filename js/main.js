@@ -123,8 +123,26 @@ document.onkeydown = function(evt) {
   }
 
 
-})();
+    //update price
+    function updatePrice(){
+      const total = [];
+      const items = document.querySelectorAll('.cart-item-price');
+      items.forEach(function(item){
+        total.push(parseFloat(item.textContent));
+      })
+      const totalMoney = total.reduce(function(total,item){
+        total +=item;
+  
+        return total;
+      }, 0)
+      const FinalMoney = totalMoney.toFixed(2)
+      document.getElementById('total-price').textContent = FinalMoney;
+      document.getElementById('items-number').textContent = total.length;
+    }
+  
 
+
+})();
 
 $(".toggle-password").click(function() {
 
@@ -136,3 +154,28 @@ $(".toggle-password").click(function() {
     input.attr("type", "password");
   }
 });
+
+
+
+// var x;
+// x = 10;
+// function test()
+// {
+//     var x;
+//     if (x > 20) {
+//         x = 50;
+//     }
+  
+//     console.log(x);
+// }
+  
+// test();
+
+// var a = 10;
+// (function() {
+//   var a = 15;
+//   window.x = function() {
+//     alert(a);
+//   }
+// })();
+// x();
