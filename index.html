@@ -124,25 +124,27 @@
             <li class="nav-item" onclick="openLogin()">
               <img src="img/profile.png" alt="profile">
             </li>
-            <li class="nav-item" id="wishlist-cart">
+            <li class="nav-item heart" id="wishlist-cart">
               <img src="img/heart.png" alt="heart">
-              <div>
+              <div id="wish-area">
                 <ul class="wishlist-content" id="wishlist-content">
                   <div id="info">
                   </div>
-                  <p>Your items in wishlist:</p>
+                  <p class="info-wish">Your items in wishlist:</p>
+                  <p id="no-item">You have not chosen favorite items yet!</p>
                 </ul>
               </div>
             </li>
             <li class="nav-item" id="cart-items">
               <img src="img/cart.png" alt="cart">
-              <div>
+              <div class="cart-area">
                 <ul class="cart-content" id="cart-content">
-                  <div id="info">
+                  <div id="info-price">
                     <span>Total price: $<p id="total-price"></p></span>
                     <span>Items number: <p id="items-number"></p></span>
                   </div>
                   <p>Your items:</p>
+                  <p id="no-item-cart">You have not chosen favorite items yet!</p>
                 </ul>
               </div>
             </li>

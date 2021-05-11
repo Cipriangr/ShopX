@@ -731,7 +731,7 @@ footer{
   
 }
 #cart-items{
-  div{
+  .cart-area{
     position: relative;
     display: none;
     .cart-content{
@@ -760,10 +760,10 @@ footer{
           align-items: center;
         }
       }
-      #info{
+      #info-price{
         margin-bottom: 5px;
         width: 100%;
-        display: flex;
+        display: none;
         justify-content: space-between;
         #total-price, #items-number{
           font-weight: 500;
@@ -776,6 +776,9 @@ footer{
         color: #84bc22;
         font-weight: 500;
       }
+      #no-item-cart{
+        color: red;
+      }
     }
   }
   &:hover{
@@ -787,7 +790,7 @@ footer{
 
 
 #wishlist-cart{
-  div{
+  #wish-area{
     position: relative;
     display: none;
     .wishlist-content{
@@ -832,10 +835,13 @@ footer{
         color: #84bc22;
         font-weight: 500;
       }
+      #no-item{
+        color: red;
+      }
     }
   }
   &:hover{
-    div{
+    #wish-area{
       display: block;
     }
   }

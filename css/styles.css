@@ -506,10 +506,10 @@ footer {
     .nav-item {
       padding: 10px 0; } }
 
-#cart-items div {
+#cart-items .cart-area {
   position: relative;
   display: none; }
-  #cart-items div .cart-content {
+  #cart-items .cart-area .cart-content {
     position: absolute;
     list-style-type: none;
     left: -300px;
@@ -521,37 +521,39 @@ footer {
     padding: 20px;
     z-index: 10;
     cursor: default; }
-    #cart-items div .cart-content .cart-item-remove {
+    #cart-items .cart-area .cart-content .cart-item-remove {
       cursor: pointer; }
-    #cart-items div .cart-content .the-item {
+    #cart-items .cart-area .cart-content .the-item {
       border-bottom: 1px solid  #84bc22;
       padding: 5px 0;
       display: flex;
       justify-content: space-between; }
-      #cart-items div .cart-content .the-item .item-content {
+      #cart-items .cart-area .cart-content .the-item .item-content {
         display: flex;
         flex-direction: column;
         align-items: center; }
-    #cart-items div .cart-content #info {
+    #cart-items .cart-area .cart-content #info-price {
       margin-bottom: 5px;
       width: 100%;
-      display: flex;
+      display: none;
       justify-content: space-between; }
-      #cart-items div .cart-content #info #total-price, #cart-items div .cart-content #info #items-number {
+      #cart-items .cart-area .cart-content #info-price #total-price, #cart-items .cart-area .cart-content #info-price #items-number {
         font-weight: 500; }
-      #cart-items div .cart-content #info span {
+      #cart-items .cart-area .cart-content #info-price span {
         display: flex; }
-    #cart-items div .cart-content p {
+    #cart-items .cart-area .cart-content p {
       color: #84bc22;
       font-weight: 500; }
+    #cart-items .cart-area .cart-content #no-item-cart {
+      color: red; }
 
 #cart-items:hover div {
   display: block; }
 
-#wishlist-cart div {
+#wishlist-cart #wish-area {
   position: relative;
   display: none; }
-  #wishlist-cart div .wishlist-content {
+  #wishlist-cart #wish-area .wishlist-content {
     position: absolute;
     list-style-type: none;
     left: -300px;
@@ -563,29 +565,31 @@ footer {
     padding: 20px;
     z-index: 10;
     cursor: default; }
-    #wishlist-cart div .wishlist-content .wish-item-remove {
+    #wishlist-cart #wish-area .wishlist-content .wish-item-remove {
       cursor: pointer; }
-    #wishlist-cart div .wishlist-content .wish-item {
+    #wishlist-cart #wish-area .wishlist-content .wish-item {
       border-bottom: 1px solid  #84bc22;
       padding: 5px 0;
       display: flex;
       justify-content: space-between; }
-      #wishlist-cart div .wishlist-content .wish-item .item-content {
+      #wishlist-cart #wish-area .wishlist-content .wish-item .item-content {
         display: flex;
         flex-direction: column;
         align-items: center; }
-    #wishlist-cart div .wishlist-content #info {
+    #wishlist-cart #wish-area .wishlist-content #info {
       margin-bottom: 5px;
       width: 100%;
       display: flex;
       justify-content: space-between; }
-      #wishlist-cart div .wishlist-content #info #total-price, #wishlist-cart div .wishlist-content #info #items-number {
+      #wishlist-cart #wish-area .wishlist-content #info #total-price, #wishlist-cart #wish-area .wishlist-content #info #items-number {
         font-weight: 500; }
-      #wishlist-cart div .wishlist-content #info span {
+      #wishlist-cart #wish-area .wishlist-content #info span {
         display: flex; }
-    #wishlist-cart div .wishlist-content p {
+    #wishlist-cart #wish-area .wishlist-content p {
       color: #84bc22;
       font-weight: 500; }
+    #wishlist-cart #wish-area .wishlist-content #no-item {
+      color: red; }
 
-#wishlist-cart:hover div {
+#wishlist-cart:hover #wish-area {
   display: block; }

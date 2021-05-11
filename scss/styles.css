@@ -43,6 +43,12 @@ header #navbarSupportedContent ul li.dropdown {
   position: unset;
 }
 
+header #navbarSupportedContent ul li.dropdown.custom {
+  padding: 10px 0;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+}
+
 header #navbarSupportedContent ul li.dropdown.custom:hover {
   height: 60px;
   display: -webkit-box;
@@ -53,7 +59,13 @@ header #navbarSupportedContent ul li.dropdown.custom:hover {
           align-items: center;
   background-color: #262a32;
   border-bottom: 2px solid #93ca57;
-  padding: 0 5px 0 15px;
+}
+
+@media screen and (max-width: 600px) {
+  header #navbarSupportedContent ul li.dropdown.custom:hover {
+    height: initial;
+    padding: 10px 0;
+  }
 }
 
 header #navbarSupportedContent ul li.dropdown.custom:hover > .dropdown-menu {
@@ -61,12 +73,25 @@ header #navbarSupportedContent ul li.dropdown.custom:hover > .dropdown-menu {
   top: 65px;
 }
 
-header #navbarSupportedContent ul li.dropdown.custom:hover > a {
-  color: white !important;
+@media screen and (max-width: 1023px) {
+  header #navbarSupportedContent ul li.dropdown.custom:hover > .dropdown-menu {
+    position: absolute;
+  }
 }
 
-header #navbarSupportedContent ul li.dropdown.custom:hover > a:after {
-  margin-left: 15px;
+@media screen and (max-width: 1023px) {
+  header #navbarSupportedContent ul li.dropdown.custom:hover > .dropdown-menu {
+    display: none;
+  }
+  header #navbarSupportedContent ul li.dropdown.custom:hover > .dropdown-menu.show {
+    position: absolute;
+    display: block;
+    top: 70px;
+  }
+}
+
+header #navbarSupportedContent ul li.dropdown.custom:hover > a {
+  color: white !important;
 }
 
 header #navbarSupportedContent ul li.dropdown.off {
@@ -75,6 +100,41 @@ header #navbarSupportedContent ul li.dropdown.off {
 
 header #navbarSupportedContent ul li.dropdown .row {
   width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  header #navbarSupportedContent ul li.dropdown .row .col-md-2, header #navbarSupportedContent ul li.dropdown .row .col-md-3 {
+    border: 2px solid white;
+    margin-bottom: 5px;
+  }
+  header #navbarSupportedContent ul li.dropdown .row .image-col {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  header #navbarSupportedContent ul li.dropdown .row .image-col {
+    display: none;
+  }
+}
+
+header #navbarSupportedContent ul li.dropdown .row h5 {
+  padding: 0 5px !important;
+}
+
+@media screen and (max-width: 600px) {
+  header #navbarSupportedContent ul li.dropdown .row h5 {
+    font-size: 1.7rem;
+  }
+}
+
+header #navbarSupportedContent ul li.dropdown .row a {
+  padding: 5px;
+  margin: 5px 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 header #navbarSupportedContent ul li.dropdown .dropdown-menu {
@@ -103,8 +163,29 @@ header #navbarSupportedContent ul li.dropdown .dropdown-menu img {
   width: 100%;
 }
 
+@media screen and (min-width: 1023px) {
+  header #navbarSupportedContent ul li.dropdown .dropdown-menu .product-col {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 21.66667% !important;
+            flex: 0 0 21.66667% !important;
+    max-width: 21.66667% !important;
+  }
+  header #navbarSupportedContent ul li.dropdown .dropdown-menu .sales-col {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 18% !important;
+            flex: 0 0 18% !important;
+    max-width: 18% !important;
+  }
+  header #navbarSupportedContent ul li.dropdown .dropdown-menu .image-col {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 27% !important;
+            flex: 0 0 27% !important;
+    max-width: 27% !important;
+  }
+}
+
 header #navbarSupportedContent ul li:hover {
-  color: #84bc22;
+  color: red;
 }
 
 header #navbarSupportedContent ul.desktop {
@@ -595,6 +676,7 @@ footer h6 {
     left: 0;
     right: 0;
     background-color: #262a32;
+    border: 4px solid #2ed3a2;
   }
   header .custom-menu .navbar-collapse button {
     background-color: #262a32;
@@ -739,6 +821,12 @@ footer h6 {
   padding: 20px 0;
 }
 
+@media screen and (max-width: 600px) {
+  .nav-item {
+    padding: 10px 0;
+  }
+}
+
 #cart-items div {
   position: relative;
   display: none;
@@ -812,16 +900,20 @@ footer h6 {
   font-weight: 500;
 }
 
+#cart-items div .cart-content #no-item {
+  color: red;
+}
+
 #cart-items:hover div {
   display: block;
 }
 
-#wishlist-cart div {
+#wishlist-cart #wish-area {
   position: relative;
   display: none;
 }
 
-#wishlist-cart div .wishlist-content {
+#wishlist-cart #wish-area .wishlist-content {
   position: absolute;
   list-style-type: none;
   left: -300px;
@@ -835,11 +927,11 @@ footer h6 {
   cursor: default;
 }
 
-#wishlist-cart div .wishlist-content .wish-item-remove {
+#wishlist-cart #wish-area .wishlist-content .wish-item-remove {
   cursor: pointer;
 }
 
-#wishlist-cart div .wishlist-content .wish-item {
+#wishlist-cart #wish-area .wishlist-content .wish-item {
   border-bottom: 1px solid  #84bc22;
   padding: 5px 0;
   display: -webkit-box;
@@ -850,7 +942,7 @@ footer h6 {
           justify-content: space-between;
 }
 
-#wishlist-cart div .wishlist-content .wish-item .item-content {
+#wishlist-cart #wish-area .wishlist-content .wish-item .item-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -863,7 +955,7 @@ footer h6 {
           align-items: center;
 }
 
-#wishlist-cart div .wishlist-content #info {
+#wishlist-cart #wish-area .wishlist-content #info {
   margin-bottom: 5px;
   width: 100%;
   display: -webkit-box;
@@ -874,22 +966,26 @@ footer h6 {
           justify-content: space-between;
 }
 
-#wishlist-cart div .wishlist-content #info #total-price, #wishlist-cart div .wishlist-content #info #items-number {
+#wishlist-cart #wish-area .wishlist-content #info #total-price, #wishlist-cart #wish-area .wishlist-content #info #items-number {
   font-weight: 500;
 }
 
-#wishlist-cart div .wishlist-content #info span {
+#wishlist-cart #wish-area .wishlist-content #info span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#wishlist-cart div .wishlist-content p {
+#wishlist-cart #wish-area .wishlist-content p {
   color: #84bc22;
   font-weight: 500;
 }
 
-#wishlist-cart:hover div {
+#wishlist-cart #wish-area .wishlist-content #no-item {
+  color: red;
+}
+
+#wishlist-cart:hover #wish-area {
   display: block;
 }
 /*# sourceMappingURL=styles.css.map */
