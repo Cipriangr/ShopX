@@ -6,6 +6,30 @@
 
 header .row {
   position: relative; }
+  header .row .search-field {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    right: 22px;
+    top: 96px;
+    width: 30%; }
+    header .row .search-field.show-search {
+      display: block; }
+    header .row .search-field input {
+      width: 100%;
+      outline: none;
+      border: 2px solid #93ca57;
+      position: relative;
+      padding-right: 30px; }
+    header .row .search-field button {
+      outline: none;
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer; }
 
 header .icons {
   list-style: none;
@@ -110,8 +134,12 @@ header #navbarSupportedContent ul {
   header #navbarSupportedContent ul.mobile {
     display: none; }
 
+header .search-field-medium {
+  display: none; }
+
 #divider {
-  border-top: 2.2px solid #eeeced; }
+  border-top: 2.2px solid #eeeced;
+  margin: 20px 0; }
 
 @media screen and (max-width: 768px) {
   .carousel #carouselExampleIndicators .carousel-control-prev {
@@ -418,12 +446,25 @@ footer {
       header .custom-menu .navbar-collapse button {
         background-color: #262a32; }
       header .custom-menu .navbar-collapse .navbar-nav {
-        padding: 10px 20px;
-        border-bottom: 3px solid white; }
+        padding: 10px 20px; }
       header .custom-menu .navbar-collapse .mobile {
         padding: 10px 0;
         display: flex !important;
         justify-content: center; }
+      header .custom-menu .navbar-collapse .search-field-medium {
+        height: 40px;
+        width: 60%;
+        margin: 0 auto;
+        display: none; }
+        header .custom-menu .navbar-collapse .search-field-medium input {
+          height: 100%;
+          width: 100%; }
+        header .custom-menu .navbar-collapse .search-field-medium button {
+          color: white;
+          margin-left: 10px;
+          font-size: 22px; }
+        header .custom-menu .navbar-collapse .search-field-medium.show-search {
+          display: flex; }
       header .custom-menu .navbar-collapse a.nav-link {
         color: white !important; }
       header .custom-menu .navbar-collapse a.disabled {
@@ -440,12 +481,12 @@ footer {
     z-index: 9999;
     left: 0;
     right: 0;
-    background-color: #262a32; }
+    background-color: #262a32;
+    border: 3px solid #84bc22; }
     header .custom-menu .navbar-collapse button {
       background-color: #262a32; }
     header .custom-menu .navbar-collapse .navbar-nav {
-      padding: 10px 20px;
-      border-bottom: 3px solid white; }
+      padding: 10px 20px; }
     header .custom-menu .navbar-collapse .mobile {
       padding: 10px 0;
       display: flex !important;
@@ -454,6 +495,22 @@ footer {
       color: white !important; }
     header .custom-menu .navbar-collapse a.disabled {
       color: white !important; }
+    header .custom-menu .navbar-collapse .search-field-medium {
+      height: 40px;
+      width: 80%;
+      margin: 0 auto;
+      display: none; }
+      header .custom-menu .navbar-collapse .search-field-medium input {
+        height: 100%;
+        width: 100%; }
+      header .custom-menu .navbar-collapse .search-field-medium button {
+        color: white;
+        margin-left: 10px;
+        font-size: 22px; }
+      header .custom-menu .navbar-collapse .search-field-medium.show-search {
+        display: flex; }
+    header .custom-menu .navbar-collapse .show-search {
+      display: flex; }
   header ul.desktop {
     display: none; }
   .carousel .carousel-item {

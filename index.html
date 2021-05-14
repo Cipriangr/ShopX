@@ -15,6 +15,9 @@
 <body>
   <header class="container">
     <div class='row align-items-center'>
+        <div class="search-field">
+          <input type="search" placeholder="Filter - Popular items(price&title)" id="custom-search">
+        </div>
         <div class="col col-sm-6 col-lg-2">
             <a class="navbar-brand active " href="#"><img src='img/logonewg.ico' ></a>
         </div>
@@ -100,10 +103,10 @@
                         </li>
                     </ul>
                     <ul class="icons mobile">
-                      <li>
+                      <li class="search-mobile-btn">
                           <a class="nav-link" href="#"><img src="img/searchmob.png" alt="search"></a>
                       </li>
-                      <li onclick="openLogin()">>
+                      <li onclick="openLogin()">
                           <button id="buttonm" type="button"><img src="img/profilemob.png" alt="profile"></button>                 
                       </li>
                       <li class="nav-item" id="wishlist-cart">
@@ -113,12 +116,16 @@
                           <a class="nav-link" href="#"><img src="img/cartmob.png" alt="cart"></a>
                       </li>
                     </ul>
+                    <div class="search-field-medium">
+                      <input type="search" placeholder="Filter - Popular items" id="custom-search2">
+                    </div>
+                    <p></p>
                 </div>
             </nav>
         </div>
         <div class="col col-sm-12 col-lg-3 the-icons">
           <ul class="icons desktop" style="cursor:pointer">
-            <li class="nav-item">
+            <li class="nav-item search-toggle">
               <img src="img/search.png" alt="search">
             </li>
             <li class="nav-item" onclick="openLogin()">
@@ -202,127 +209,18 @@
         <div class="line">
           <div class="title"><h1>Popular Items</h1></div>
         </div>
-        <div class="row">
-            <div class="col-md-3 mb-4">
-              <div class="card mb-3 h-100">
-                <div class="hover">
-                    <span class="addtocart">
-                      <img class="cart-item" src="img/plus.png" alt="#">
-                    </span>
-                    <span class="addtowishlist">
-                      <img src="img/heartred.png" alt="#">
-                    </span>
-                </div>
-                <img src="img/layer1.png" class="card-img-top" alt="#">
-                <div class="card-body">
-                  <h4 class="card-title">Statistics table</h4>
-                  <p class="card-text">$799.55</p> 
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-md-3 mb-4">
-              <div class="card mb-3 h-100">
-                  <div class="hover">
-                    <span class="addtocart"><img class="cart-item" src="img/plus.png" alt="#"></span>
-                    <span class="addtowishlist"><img src="img/heartred.png" alt="#"></span>
-                  </div>
-                  <img src="img/layer2.png" class="card-img-top" alt="#">
-                  <div class="card-body">
-                  <h4 class="card-title">Pen</h4>
-                  <p class="card-text">$659.55</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-md-3 mb-4">
-                    <div class="card mb-3 h-100">
-                        <div class="hover">
-                          <span class="addtocart"><img class="cart-item" src="img/plus.png" alt="#"></span>
-                          <span class="addtowishlist"><img src="img/heartred.png" alt="#"></span>
-                        </div>
-                    <img src="img/layer3.png" class="card-img-top" alt="#">
-                    <div class="card-body"> 
-                    <h4 class="card-title">Keyboard </h4>
-                        <p class="card-text">$ 129.55</p>
-                </div>
-                </div>
-            </div>
-            
-            <div class="col-md-3 mb-4">
-                    <div class="card mb-3 h-100">
-                        <div class="hover">
-                          <span class="addtocart"><img class="cart-item" src="img/plus.png" alt="#"></span>
-                          <span class="addtowishlist"><img src="img/heartred.png" alt="#"></span>
-                        </div>
-                    <img src="img/layer4.png" class="card-img-top" alt="#">
-                    <div class="card-body">
-                        <h4 class="card-title">Clock</h4>
-                        <p class="card-text">$299.99</p>
-                </div>
-                </div>
-            </div>
+        <div class="row" id="cards-content">
+
         </div> 
     </div>
     <!--
       -- ─── 2ND PRODUCTS COLUMN ─────────────────────────────────────────
       -->
-    <div class="container">
-       <div class="row">
-            <div class="col-md-3 mb-4">
-                  <div class="card mb-4 h-100">
-                      <div class="hover">
-                        <span class="addtocart"><img class="cart-item" src="img/plus.png" alt="#"></span>
-                        <span class="addtowishlist"><img src="img/heartred.png" alt="#"></span>
-                      </div>
-                  <img src="img/layer5.png" class="card-img-top" alt="#">
-                  <div class="card-body">
-                  <h4 class="card-title">Interactive Display</h4>
-                  <p class="card-text">$659.95</p>  
-                  </div>
-              </div>
-            </div>  
-            <div class="col-md-3 mb-4">
-              <div class="card mb-4 h-100">
-                <div class="hover">
-                  <span class="addtocart"><img class="cart-item" src="img/plus.png" alt="#"></span>
-                  <span class="addtowishlist"><img src="img/heartred.png" alt="#"></span>
-                </div>
-                <img src="img/layer6.png" class="card-img-top" alt="#">
-                <div class="card-body">
-                <h4 class="card-title">Tory Desk Calendar</h4>
-                  <p class="card-text">$799.95</p>  
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                  <div class="card mb-4 h-100">
-                      <div class="hover">
-                        <span class="addtocart"><img class="cart-item" src="img/plus.png" alt="#"></span>
-                        <span class="addtowishlist"><img src="img/heartred.png" alt="#"></span>
-                      </div>
-                    <img src="img/layer7.png" class="card-img-top" alt="#">
-                    <div class="card-body">
-                    <h4 class="card-title">Something nice</h4>
-                    <p class="card-text">$330.99</p>  
-                    </div>
-                  </div>
-                </div>
-             <div class="col-md-3 mb-4">
-                  <div class="card mb-4 h-100">
-                      <div class="hover">
-                        <span class="addtocart"><img class="cart-item" src="img/plus.png" alt="#"></span>
-                        <span class="addtowishlist"><img src="img/heartred.png" alt="#"></span>
-                      </div>
-                    <img src="img/layer6.png" class="card-img-top" alt="#">
-                    <div class="card-body">
-                     <h4 class="card-title">Something here too</h4>
-                      <p class="card-text">$799.95</p>  
-                    </div>
-                  </div>
-              </div>  
+    <!-- <div class="container">
+      <div class="row" id="cards-content2">
+
       </div> 
-    </div>
+    </div> -->
   </section>
 
   <!--
