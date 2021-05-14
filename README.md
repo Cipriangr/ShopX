@@ -5,4 +5,4 @@
 
 I used:
 
-HTML, JS, a combination of CSS and SASS (by working on this project I found about SASS), little bit of Jquery and gulp.
+HTML, JS, a combination of CSS and SASS (by working on this project I found about SASS), little bit of Jquery, gulp and Bootstrap.
