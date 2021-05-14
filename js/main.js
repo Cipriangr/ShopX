@@ -107,6 +107,7 @@ function renderCards(data){
 
 renderCards(cards)
 
+
 let filteredCards = []; 
 
 searchInput.addEventListener('keyup', (e)=>{
