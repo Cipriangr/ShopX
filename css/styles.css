@@ -36,6 +36,14 @@ header .icons {
   display: flex;
   margin: 0;
   justify-content: space-between; }
+  header .icons li {
+    display: flex;
+    align-items: center; }
+    header .icons li i {
+      color: #aba9a7;
+      font-size: 22px; }
+      header .icons li i:hover {
+        color: #93ca57; }
 
 header .col-sm-6 {
   position: unset; }
@@ -396,7 +404,8 @@ footer {
       margin: 0 auto;
       min-width: 181px;
       border: none;
-      border-radius: 50px; }
+      border-radius: 50px;
+      cursor: pointer; }
       #loginform form .buttons button:focus {
         outline: none; }
       #loginform form .buttons button:first-child {
@@ -404,6 +413,8 @@ footer {
         color: white;
         height: 40px;
         margin-bottom: 15px; }
+        #loginform form .buttons button:first-child:hover {
+          opacity: 0.7; }
       #loginform form .buttons button:last-child {
         background: none;
         color: #84bc22; }

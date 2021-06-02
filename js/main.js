@@ -279,125 +279,17 @@ searchInput.addEventListener('keyup', (e)=>{
   
 })();  
 
-$(".toggle-password").click(function() {
-  
-  $(this).toggleClass("fa-eye");
-  var input = $($(this).attr("toggle"));
-  if (input.attr("type") == "password") {
-    input.attr("type", "text");
-  } else {
-    input.attr("type", "password");
-  }  
-});  
+// $(".toggle-password").toggle(function() {
+//   $(this).toggleClass("fa-eye");
+//   var input = $($(this).attr("toggle"));
+//   if (input.attr("type") == "password") {
+//     input.attr("type", "text");
+//   } else {
+//     input.attr("type", "password");
+//   }  
+// });  
 
-
-
-// var x;
-// x = 10;
-// function test()
-// {
-//     var x;  
-//     if (x > 20) {
-//         x = 50;  
-//     }
-
-//     console.log(x);
-// }
-
-// test();
-
-// var a = 10;
-// (function() {
-//   var a = 15;  
-//   window.x = function() {
-//     alert(a);  
-//   }
-// })();
-// x();
-
-// var test1 = {
-//   name: 'test',  
-//   age: '12'
-// }
-// var test2 = test1;
-
-
-
-// if(test2 == test1){
-//   console.log(test2)  
-// }else{
-//   console.log('eroare')  
-// }
-// Setup
-// Setup
-
-
-
-// function phoneticLookup(val) {
-//   var result = "";  
-
-//   // Only change code below this line
-//   var lookup = {
-//       "alpha": "Adams",  
-//       "bravo": "Boston",
-//       "charlie":"Chicago",
-//       "delta": "Denver",
-//       "echo":"Easy",
-//       "foxtrot":"Frank"
-//   }
-//   result = lookup[val]
-//   // Only change code above this line
-//   return result;
-// }
-
-// console.log(phoneticLookup("charlie"));
-
-
-//object exercise
-// var contacts = [
-//   {
-//       "firstName": "Akira",  
-//       "lastName": "Laine",
-//       "number": "0543236543",
-//       "likes": ["Pizza", "Coding", "Brownie Points"]
-//   },
-//   {
-//       "firstName": "Harry",  
-//       "lastName": "Potter",
-//       "number": "0994372684",
-//       "likes": ["Hogwarts", "Magic", "Hagrid"]
-//   },
-//   {
-//       "firstName": "Sherlock",  
-//       "lastName": "Holmes",
-//       "number": "0487345643",
-//       "likes": ["Intriguing Cases", "Violin"]
-//   },
-//   {
-//       "firstName": "Kristian",  
-//       "lastName": "Vos",
-//       "number": "unknown",
-//       "likes": ["JavaScript", "Gaming", "Foxes"]
-//   }
-// ];
-
-
-// function lookUpProfile(name, prop) {
-//   for (let x = 0; x < contacts.length; x++) {
-//     if (contacts[x].firstName === name) {
-//       if (contacts[x].hasOwnProperty(prop)) {
-//         return contacts[x][prop];  
-//       }
-//       else{
-//         return "No such property";  
-//       }
-//     }else{
-//       return "No such contact";  
-//     }
-//   }
-// }
-
-// lookUpProfile("Akira");
-
-// lookUpProfile("Akira", "likes");
-
+$('.toggle-password').on('click', function(){
+  const passwordfield= document.querySelector('.password-field')
+  passwordfield.setAttribute('type', 'text')
+})
